@@ -2,7 +2,7 @@ canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
 rover_width=100;
-rover_hight=90;
+rover_height=90;
 
 background_image="mars.jpg";
 
@@ -59,4 +59,36 @@ function add()
     right();
     console.log("right"); 
     } 
+}
+function up(){
+  if(rover_y >=0){
+    rover_y = rover_y -5;
+    console.log("When up arrow is pressed,  x = " + rover_x + " | y = " +rover_y);
+    uploadBackground();
+    uploadrover();
+  }
+}
+function down(){
+  if(rover_y <=500){
+    rover_y = rover_y +5;
+    console.log("When up arrow is pressed,  x = " + rover_x + " | y = " +rover_y);
+    uploadBackground();
+    uploadrover();
+  }
+}
+function left(){
+  if(rover_x >=0){
+    rover_x = rover_x -5;
+    console.log("When up arrow is pressed,  x = " + rover_x + " | y = " +rover_y);
+    uploadBackground();
+    uploadrover();
+  }
+}
+function right(){
+  if(rover_x <=700){
+    rover_x = rover_x +5;
+    console.log("When up arrow is pressed,  x = " + rover_x + " | y = " +rover_y);
+    uploadBackground();
+    uploadrover();
+  }
 }
